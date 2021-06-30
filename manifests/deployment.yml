@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: abdurcirclepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: abdurcirclepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: abdurcirclepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: abdurcirclepipelinesjavascriptdocker 
+          image: circletestregistry.azurecr.io/abdurcirclepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
